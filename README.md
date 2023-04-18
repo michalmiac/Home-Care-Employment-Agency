@@ -24,7 +24,7 @@ The presented photo shows a network cluster in the testing phase. On the left si
 # VoIP technical solutions
 ![My animated logo](https://github.com/michalmiac/Agencja-pracy/blob/main/graphics/20230407_164237.jpg)
 In the above image, the electronic components are visible in sequence from the left side: a step-down converter, a SIM800L GSM/GPRS module, connectors exiting the module to a board with resistors that lead to an Audio Jack connection, and finally a sound card. By connecting the SIM800L module to a computer via a serial port, it is possible to control the module, send commands for sending and receiving text messages (SMS), and issue commands to initiate voice calls. A Java program was specifically created for this project, enabling the sending of ATM commands via the serial port to the GSM board, allowing for the exchange of text messages through the same channel. Meanwhile, the sound that reaches the GSM module is passed through the resistors to the Audio Jack connection, and then to the sound card. Sending sound to the GSM module works in precisely the opposite way, where the sound card sends the sound to the Audio Jack connection, and then it passes through the resistors to the GSM board, allowing for sound exchange. An important element in the presented sound connection is the sending of ATM commands to initiate a call, but of course, it is equally important to be able to receive sound and send sound from the sound card. Another Java program was written for this purpose.
-# OOffice management software
+# Office management software
 ### Below are graphical representations of some modules of the office task management program. They are only a small sample of the available functionalities, and their purpose is to provide a general overview of the tasks that our company faces.
 
 ![My animated logo](https://github.com/michalmiac/Agencja-pracy/blob/main/graphics/Steilen-Personal-Care-FRONTEND-(2).svg)
@@ -116,11 +116,10 @@ default Object createDto(Object dtoObject, Object controllerClass, @Nullable Lis
 }
 ```    
 This code aims to enable scalability by using the MyAnno annotation, which allows for freely specifying the fields from which the value should be extracted. This makes it easy to add new fields without having to modify the createDto method.    
-
-      + ObjectNode was used to store keys and values in JSON format.
-      + The accessibility of private fields was set by using field.setAccessible(true).
-      + An additional null value checking to avoid exceptions was added.
-      + A switch statement with explicit values for field types, which avoids the need to use the instanceof method.
++ ObjectNode was used to store keys and values in JSON format.
++ The accessibility of private fields was set by using field.setAccessible(true).
++ An additional null value checking to avoid exceptions was added.
++ A switch statement with explicit values for field types, which avoids the need to use the instanceof method.
 
 
 ```java
